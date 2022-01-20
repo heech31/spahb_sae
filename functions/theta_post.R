@@ -1,3 +1,4 @@
+# Sampling theta from its conditional posterior distribution
 theta_sample <-  function(beta,sigma2,rho,W,type=NULL,X){
   
   if(is.null(type)){print("Error: Spatial structure needs to be specified"); break}

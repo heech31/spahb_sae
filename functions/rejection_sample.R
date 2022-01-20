@@ -15,7 +15,7 @@ rejection.sampling <- function(Y, X, D, W, type=NULL, S, verbose=FALSE){
 
   lkuk <- rho.bound(W,type) # lower (lk) and upper (uk) bounds of rho
   lk <- lkuk[1]+1e-4; uk <- lkuk[2]-1e-4
-  #logden(c(5,0.5),W,type=type)
+  
   # find the mode of the (unnormalized) log density of (sigma2, rho)
   if(type!="fh"){
     
@@ -140,7 +140,6 @@ rejection.sampling <- function(Y, X, D, W, type=NULL, S, verbose=FALSE){
                                df=3, lb=c(0), ub=c(Inf), log=TRUE)
         lratio      <- logd_target - logd_prop - logM
         ntry        <- ntry + 1
-        #print(lratio<= logM+log(u))
         
         while.count <- while.count + 1
         if(while.count%%1000==0){

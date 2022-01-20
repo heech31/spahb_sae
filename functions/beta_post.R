@@ -1,4 +1,3 @@
-library(matrixcalc)
 # Sampling beta from its conditional posterior distribution
 beta_sample <- function(sigma2,rho,W,type=NULL){
   
